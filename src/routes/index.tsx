@@ -31,7 +31,66 @@ const WA_DEFAULT = wa(
 );
 
 export const Route = createFileRoute("/")({
-  head:<!-- Google tag (gtag.js) -->
+  head:  head: () => ({
+  meta: [
+    {
+      charSet: 'utf-8',
+    },
+    {
+      name: 'viewport',
+      content: 'width=device-width, initial-scale=1',
+    },
+    {
+      title: 'Limpeza e Higienização de Ar Condicionado em SP | Jiclimatiza',
+    },
+    {
+      name: 'description',
+      content: 'Especialista em limpeza, higienização, manutenção preventiva e instalação de ar condicionado em São Paulo e Zona Sul. Atendimento rápido e orçamento gratuito.',
+    },
+    {
+      name: 'keywords',
+      content: 'limpeza de ar condicionado sp, higienização de ar condicionado zona sul, manutenção de ar condicionado são paulo, conserto de ar condicionado, limpeza de ar condicionado interlagos, instalaçao de ar condicionado sp',
+    },
+    // Meta Tags Locais para o Google entender sua região
+    {
+      name: 'geo.region',
+      content: 'BR-SP',
+    },
+    {
+      name: 'geo.placename',
+      content: 'São Paulo',
+    },
+    // Compartilhamento em redes sociais
+    {
+      property: 'og:title',
+      content: 'Limpeza e Higienização de Ar Condicionado em São Paulo | Jiclimatiza',
+    },
+    {
+      property: 'og:description',
+      content: 'Serviços de higienização, limpeza preventiva e manutenção de ar condicionado em São Paulo. Fale conosco pelo WhatsApp!',
+    },
+    {
+      property: 'og:type',
+      content: 'website',
+    },
+  ],
+  scripts: [
+    {
+      src: 'https://www.googletagmanager.com/gtag/js?id=G-16ZSBVQRS1',
+      async: true,
+    },
+    {
+      children: `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-16ZSBVQRS1');
+      `,
+    },
+  ],
+}),
+    
+    <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-16ZSBVQRS1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
