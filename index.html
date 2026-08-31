@@ -1,12 +1,24 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jiclimatiza</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html>
+import { createFileRoute } from '@tanstack/react-router'
+
+export const Route = createFileRoute('/')({
+  head: () => ({
+    meta: [
+      {
+        title: 'Jiclimatiza - Ar Condicionado e Instalação',
+      },
+      {
+        name: 'description',
+        content: 'Manutenção preventiva, corretiva e instalação de ar condicionado.',
+      },
+    ],
+  }),
+  component: HomeComponent,
+})
+
+function HomeComponent() {
+  return (
+    <div>
+      {/* O conteúdo da sua página principal entra aqui */}
+    </div>
+  )
+}
