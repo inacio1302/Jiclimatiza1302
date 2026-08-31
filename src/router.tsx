@@ -1,28 +1,12 @@
-import { createRootRouteWithContext, Outlet } from '@tanstack/react-router'
-import type { QueryClient } from '@tanstack/react-query'
+import { createRouter } from '@tanstack/react-router'
+import { routeTree } from './routeTree.gen'
 
-export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
-  head: () => ({
-    meta: [
-      {
-        charset: 'utf-8',
-      },
-      {
-        name: 'viewport',
-        content: 'width=device-width, initial-scale=1',
-      },
-      {
-        title: 'Jiclimatiza',
-      },
-    ],
-  }),
-  component: RootComponent,
+export const router = createRouter({
+  routeTree,
 })
 
-function RootComponent() {
-  return (
-    <>
-      <Outlet />
-    </>
-  )
+declare module '@tanstack/react-router' {
+  interface Register {
+    router: typeof router
+  }
 }
