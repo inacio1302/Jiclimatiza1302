@@ -31,7 +31,16 @@ const WA_DEFAULT = wa(
 );
 
 export const Route = createFileRoute("/")({
-  head: () => ({
+  head:<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-16ZSBVQRS1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-16ZSBVQRS1');
+</script>
+    () => ({
     meta: [
       { title: "JI CLIMATIZA | Instalação, Manutenção e Higienização de Ar Condicionado em SP" },
       {
