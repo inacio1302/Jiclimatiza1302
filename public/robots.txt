@@ -2,6 +2,8 @@
 User-agent: *
 Allow: /
 
+Sitemap: https://www.jiclimatiza.com.br/sitemap.xml
+
 # Bloqueia o acesso a rotas administrativas e arquivos privados (se houver)
 Disallow: /admin/
 Disallow: /api/
