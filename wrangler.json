@@ -2,6 +2,7 @@
   "name": "jiclimatiza",
   "compatibility_date": "2026-08-31",
   "assets": {
-    "directory": "./dist"
+    "directory": "./dist",
+    "html_handling": "single-page-app"
   }
 }
