@@ -31,7 +31,7 @@ const WA_DEFAULT = wa(
 );
 
 export const Route = createFileRoute("/")({
-  head:  head: () => ({
+  head:  () => ({
   meta: [
     {
       charSet: 'utf-8',
